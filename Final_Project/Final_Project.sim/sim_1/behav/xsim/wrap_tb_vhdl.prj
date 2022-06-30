@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Final_Project.srcs/sources_1/new/final_mem.vhd" \
+"../../../../Final_Project.srcs/sources_1/new/robotFSM.vhd" \
+"../../../../Final_Project.srcs/sources_1/new/top_level_wrap.vhd" \
+"../../../../Final_Project.srcs/sources_1/new/wrap_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,270 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Apr  6 10:08:49 2022
+# Process ID: 19148
+# Current directory: C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4120 C:\Users\austy\Desktop\USF\FPGA Projects\Final_Project\Final_Project.xpr
+# Log file: C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/vivado.log
+# Journal file: C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.xpr}
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 1121.727 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'wrap_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj wrap_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/final_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'final_mem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/top_level_wrap.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_level_wrap'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/wrap_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrap_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xelab -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture mem_arch of entity xil_defaultlib.final_mem [final_mem_default]
+Compiling architecture robotarch of entity xil_defaultlib.robotFSM [robotfsm_default]
+Compiling architecture wrap_arch of entity xil_defaultlib.top_level_wrap [top_level_wrap_default]
+Compiling architecture tb_arch of entity xil_defaultlib.wrap_tb
+Built simulation snapshot wrap_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "wrap_tb_behav -key {Behavioral:sim_1:Functional:wrap_tb} -tclbatch {wrap_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source wrap_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'wrap_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1121.727 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/wrap_tb/top/mem/RAM}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/wrap_tb/top/mem/RAM}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'wrap_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj wrap_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xelab -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1121.727 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'wrap_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj wrap_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/final_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'final_mem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/top_level_wrap.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_level_wrap'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/wrap_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrap_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1121.727 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xelab -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture mem_arch of entity xil_defaultlib.final_mem [final_mem_default]
+Compiling architecture robotarch of entity xil_defaultlib.robotFSM [robotfsm_default]
+Compiling architecture wrap_arch of entity xil_defaultlib.top_level_wrap [top_level_wrap_default]
+Compiling architecture tb_arch of entity xil_defaultlib.wrap_tb
+Built simulation snapshot wrap_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1121.727 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'wrap_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj wrap_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/final_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'final_mem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/top_level_wrap.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_level_wrap'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/wrap_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrap_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1121.727 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xelab -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture mem_arch of entity xil_defaultlib.final_mem [final_mem_default]
+Compiling architecture robotarch of entity xil_defaultlib.robotFSM [robotfsm_default]
+Compiling architecture wrap_arch of entity xil_defaultlib.top_level_wrap [top_level_wrap_default]
+Compiling architecture tb_arch of entity xil_defaultlib.wrap_tb
+Built simulation snapshot wrap_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1121.727 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'wrap_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj wrap_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/final_mem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'final_mem'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/top_level_wrap.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_level_wrap'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.srcs/sources_1/new/wrap_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrap_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1121.727 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'wrap_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.sim/sim_1/behav/xsim'
+"xelab -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto d7bbe7c622e84c1bb8bb3ee8ee26d2c1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot wrap_tb_behav xil_defaultlib.wrap_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture mem_arch of entity xil_defaultlib.final_mem [final_mem_default]
+Compiling architecture robotarch of entity xil_defaultlib.robotFSM [robotfsm_default]
+Compiling architecture wrap_arch of entity xil_defaultlib.top_level_wrap [top_level_wrap_default]
+Compiling architecture tb_arch of entity xil_defaultlib.wrap_tb
+Built simulation snapshot wrap_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1121.727 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  6 10:14:26 2022...

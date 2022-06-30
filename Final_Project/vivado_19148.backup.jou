@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Apr  6 10:08:49 2022
+# Process ID: 19148
+# Current directory: C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4120 C:\Users\austy\Desktop\USF\FPGA Projects\Final_Project\Final_Project.xpr
+# Log file: C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/vivado.log
+# Journal file: C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/austy/Desktop/USF/FPGA Projects/Final_Project/Final_Project.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source wrap_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/wrap_tb/top/mem/RAM}} 
+current_wave_config {Untitled 1}
+add_wave {{/wrap_tb/top/mem/RAM}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
